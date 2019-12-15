@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://kit.fontawesome.com/068a06a698.js" crossorigin="anonymous" rel="stylesheet"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    
+</head>
+
+<body >
+    <div id="container">
+        <div id="serach-container">
+        <input type="text" placeholder="Please enter a city" id="city-search">
+        <button class="search"><i class="fas fa-search"></i></button></div>
+
+        <div id="cities-container"></div>
+    </div>
+
+    <script id="new-city-template" type="text/x-handlebars-template">
+        {{#each allCityData}}
+        <div id="new-city">
+            <button class="fresh"><i class="fas fa-sync-alt fa-2x refresh"></i></button>
+            {{#if isSaved}}
+            <button class="subtract"><i class="fas fa-minus-circle fa-2x remove"></i></button>
+            {{else}}
+            <button class="icon add"><i class="fas fa-plus-circle fa-2x save"></i></button>
+            {{/if}}
+            <h1 id="city-name">{{name}}</h1>
+            <h2 id="city-temperature">{{temperature}} °C</h2>
+            <h2 id="weather-conditions">{{condition}}</h2>
+            <img src={{conditionPic}} id="weather-conditions-pic" />
+            <h4 id="humidity">Humidity: {{humidity}}%</h4>
+            <h4 id="sunrise">Sunrise: {{sunrise}}</h4>
+            <h4 id="sunset">Sunset: {{sunset}}</h4>
+        </div>
+        {{/each}}
+    </script>
+
+
+
+    <script src="/moment/moment.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="TempManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="Controller.js"></script>
+</body>
+
+</html>

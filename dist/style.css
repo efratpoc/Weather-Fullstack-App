@@ -1,0 +1,123 @@
+
+#container{
+    background-color: hsla(207, 90%, 54%, 0.83);
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#serach-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: 10px;
+    grid-gap: 5px;
+}
+#city-search{
+    display: grid;
+    justify-self: end;
+    width: 90%;
+    padding: 7px;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 450;
+    background-color: hsla(203, 94%, 56%, 0);
+    color: white;
+    border: 0px;
+    border-radius: 2px;
+}
+::placeholder{
+    color: white;
+    font-family: Ubuntu, sans-serif;
+}
+#city-search:focus{
+    outline: none;
+    box-shadow: none;
+    border: none
+}
+.search{
+    display: grid;
+    justify-self: start;
+    padding: 7px;
+    font-family: Ubuntu, sans-serif;
+    border-radius: 2px;
+    border: 0px;
+    background-color: hsla(203, 94%, 56%, 0);
+    color: white;
+    width: 15%;
+}
+#cities-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    font-family: Ubuntu, sans-serif;
+    align-content: center;
+    grid-gap: 8px;
+    margin-top: 10px;
+    padding: 10px
+    
+}
+
+#new-city{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: hsla(207, 90%, 54%, 0.76);
+    border-radius: 12px;
+    border: 2px hsla(207, 90%, 54%, 0.95);
+    border-style: none none outset outset;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "ref city temp"
+    "bu con conPic"
+    "hum rise set"
+}
+.fresh{
+    grid-area: ref;
+    background-color: hsla(207, 90%, 54%, 0);
+    border: 0px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    color: #E0F2F1;
+}
+
+.add{
+    grid-area: bu;
+    color: #2E7D32;
+    background-color: hsla(207, 90%, 54%, 0);
+    border: 0px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.subtract{
+    grid-area: bu;
+    color: #D84315;
+    background-color: hsla(207, 90%, 54%, 0);
+    border: 0px;
+}
+
+#city-name{
+    grid-area: city
+}
+#city-temperature{
+    grid-area: temp
+}
+#weather-conditions{
+    grid-area: con
+}
+#weather-conditions-pic{
+    grid-area: conPic
+}
+#humidity{
+    grid-area: hum;
+}
+#sunrise{
+    grid-area: rise;
+}
+#sunset{
+    grid-area: set
+}
