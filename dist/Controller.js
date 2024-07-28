@@ -14,6 +14,7 @@ $(document).ready(loadPage())
 
 
 const handleSearch = async function () {
+    console.log('hi2')
     let requiredCity = $("#city-search").val()
     let requiredCityAchieved = await tempManager.getCityData(requiredCity)
     for (let i of tempManager.cityData) {
